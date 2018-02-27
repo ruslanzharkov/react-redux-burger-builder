@@ -16,6 +16,10 @@ const burgerIngredient = (props) => {
                     <div classname={classes.Seeds2}></div>
                 </div>
             );
+            break;
+        case 'meat': 
+            
+            break;
         default:
             break;
     }
