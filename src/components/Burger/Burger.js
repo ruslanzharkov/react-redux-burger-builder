@@ -5,11 +5,17 @@ import BurgerIngredient from './BurgerIngredient/BurgerIngredient';
 
 class Burger extends Component {
     render() {
+        let transformedIngredients = Object.keys(this.props.ingredients)
+            .map(ingredientKey => {
+                return [...Array(this.props.ingredients[ingredientKey])].map((_, i) => {
+                    return <BurgerIngredient key={ingredientKey + i} type={ingredientKey}/>
+                });
+            });
+
         return (
             <div className={classes.Burger}>
                 <BurgerIngredient type="bread-top"/>
-                <BurgerIngredient type="cheese"/>
-                <BurgerIngredient type="meat"/>
+                {transformedIngredients}
                 <BurgerIngredient type="bread-bottom"/>
             </div>
         );
