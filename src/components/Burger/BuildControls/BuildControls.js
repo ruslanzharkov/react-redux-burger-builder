@@ -19,6 +19,7 @@ class BuildControls extends Component {
                         label={control.label}
                         added={() => this.props.ingredientAdded(control.type)}
                         removed={() => this.props.ingredientRemoved(control.type)}
+                        disabled={this.props.disabled[control.type]}
                     />
                 })}
             </div>
