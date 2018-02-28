@@ -23,6 +23,7 @@ class BuildControls extends Component {
                         disabled={this.props.disabled[control.type]}
                     />
                 })}
+                <button className={classes.OrderButton} disabled={!this.props.purchasable}>ORDER NOW</button>
             </div>
         );
     }
