@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 
 import Aux from '../../hoc/Aux';
 import Burger from '../../components/Burger/Burger';
@@ -43,6 +43,9 @@ class BurgerBuilder extends Component {
 
     removeIngredientHandler = (type) => {
         const oldCount = this.state.ingredients[type];
+        if (oldCount <= 0)
+            return;
+
         const updatedCount = oldCount - 1;
         const updatedIngredients = {
             ...this.state.ingredients
