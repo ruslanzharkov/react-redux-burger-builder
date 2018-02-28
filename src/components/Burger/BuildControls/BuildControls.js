@@ -14,7 +14,11 @@ class BuildControls extends Component {
         return(
             <div className={classes.BuildControls}>
                 {controls.map((control) => {
-                    return <BuildControl key={control.label} label={control.label}/>
+                    return <BuildControl
+                        key={control.label}
+                        label={control.label}
+                        added={() => this.props.ingredientAdded(control.type)}
+                    />
                 })}
             </div>
         );
