@@ -7,7 +7,7 @@ class Button extends Component {
         return(
             <button
                 onClick={this.props.clicked}
-                className={[classes.Button, classes[this.props.btnType].join(' ')]}>{this.props.children}</button>
+                className={[classes.Button, classes[this.props.btnType]].join(' ')}>{this.props.children}</button>
         );
     }
 }
