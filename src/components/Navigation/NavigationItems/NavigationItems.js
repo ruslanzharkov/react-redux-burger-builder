@@ -6,7 +6,7 @@ import Item from './Item/Item';
 class NavigationItems extends Component {
     render() {
         return(
-            <ul className={classes.NavigationItems}>
+            <ul className={classes.NavigationItem}>
                 <Item link="/" active>Burger Builder</Item>
                 <Item link="/">Checkout</Item>
             </ul>
