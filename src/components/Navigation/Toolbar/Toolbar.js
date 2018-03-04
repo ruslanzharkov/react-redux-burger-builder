@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 
 import classes from './Toolbar.css';
-import Logo from '../Logo/Logo';
+import Logo from '../../Logo/Logo';
+import Items from '../NavigationItems/NavigationItems';
 
 class Toolbar extends Component {
     render() {
@@ -10,7 +11,7 @@ class Toolbar extends Component {
                 <div>MENU</div>
                 <Logo/>
                 <nav>
-                    ...
+                    <Items/>
                 </nav>
             </header>
         );
