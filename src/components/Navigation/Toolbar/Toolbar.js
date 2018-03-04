@@ -9,7 +9,9 @@ class Toolbar extends Component {
         return(
             <header className={classes.Toolbar}>
                 <div>MENU</div>
-                <Logo/>
+                <div className={classes.Logo}>
+                    <Logo/>
+                </div>
                 <nav>
                     <Items/>
                 </nav>
