@@ -12,7 +12,7 @@ class Toolbar extends Component {
                 <div className={classes.Logo}>
                     <Logo/>
                 </div>
-                <nav>
+                <nav className={classes.DesktopOnly}>
                     <Items/>
                 </nav>
             </header>
