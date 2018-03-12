@@ -13,9 +13,11 @@ class CheckoutSummary extends Component {
                     <Burger ingredients={this.props.ingredients}/>
                 </div>
                 <Button 
-                    btnType="Danger">CANCEL</Button>
+                    btnType="Danger"
+                    clicked={this.props.checkoutCancelled}>CANCEL</Button>
                 <Button 
-                    btnType="Success">CONTINUE</Button>
+                    btnType="Success"
+                    clicked={this.props.checkoutContinued}>CONTINUE</Button>
             </div>
         );
     }
