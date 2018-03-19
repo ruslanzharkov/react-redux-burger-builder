@@ -4,10 +4,24 @@ import classes from './Order.css';
 
 class Order extends Component {
     render() {
+        const ingredients = [];
+        for (let ingredientName in this.props.ingredients) {
+            ingredients.push({
+                name: ingredientName, 
+                amount: this.props.ingredients[ingredientName]
+            });
+        }
+
+        const ingredientsOutput = ingredients.map(ig => {
+            return <span 
+                style={{textTransform: 'capitalize'}}
+                key={ig.name}>{ig.name}({ig.amount}), </span>
+        });
+
         return(
             <div className={classes.Order}>
-                <p>Ingredients: Salad (1)</p>
-                <p>Price: <strong>USD 5.45</strong></p>
+                <p>Ingredients: {ingredientsOutput}</p>
+                <p>Price: <strong>USD {this.props.price.toFixed(2)}</strong></p>
             </div>
         );
     }
