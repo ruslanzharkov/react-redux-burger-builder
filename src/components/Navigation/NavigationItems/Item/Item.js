@@ -8,7 +8,9 @@ class Item extends Component {
         return(
             <li className={classes.NavigationItem}>
                 <NavLink
-                    to={this.props.link}>
+                    to={this.props.link}
+                    exact
+                    activeClassName={classes.active}>
                     {this.props.children}
                 </NavLink>
             </li>
