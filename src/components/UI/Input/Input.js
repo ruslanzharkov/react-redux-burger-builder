@@ -5,15 +5,24 @@ import classes from './Input.css';
 class Input extends Component {
     render() {
         let inputElement = null;
-        switch(this.props.inputtype) {
+        switch(this.props.elementType) {
             case 'input': 
-                inputElement = <input className={classes.InputElement} {...this.props}/>;
+                inputElement = <input 
+                    className={classes.InputElement} 
+                    {...this.props.elementConfig} 
+                    value={this.props.value}/>;
                 break;
             case 'textarea': 
-                inputElement = <textarea className={classes.InputElement} {...this.props}/>
+                inputElement = <textarea 
+                    className={classes.InputElement} 
+                    {...this.props.elementConfig}
+                    value={this.props.value}/>
                 break;
             default: 
-                inputElement = <input className={classes.InputElement} {...this.props}/>
+                inputElement = <input 
+                    className={classes.InputElement} 
+                    {...this.props.elementConfig}
+                    value={this.props.value}/>
                 break; 
         }
         return(
