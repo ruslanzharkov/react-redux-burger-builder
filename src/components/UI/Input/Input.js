@@ -10,19 +10,25 @@ class Input extends Component {
                 inputElement = <input 
                     className={classes.InputElement} 
                     {...this.props.elementConfig} 
-                    value={this.props.value}/>;
+                    value={this.props.value}
+                    onChange={this.props.changed}
+                    />;
                 break;
             case 'textarea': 
                 inputElement = <textarea 
                     className={classes.InputElement} 
                     {...this.props.elementConfig}
-                    value={this.props.value}/>
+                    value={this.props.value}
+                    onChange={this.props.changed}
+                    />
                 break;
             case 'select':
                 inputElement = (
                 <select 
                     className={classes.InputElement}
-                    value={this.props.value}>
+                    value={this.props.value}
+                    onChange={this.props.changed}
+                    >
                         {this.props.elementConfig.options.map(option => (
                             <option key={option.value} value={option.value}>{option.displayValue}</option>
                         ))}
